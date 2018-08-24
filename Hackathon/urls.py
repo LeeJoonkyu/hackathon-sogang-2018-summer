@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Account.views import signup,signin
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('join/',signup,name='join'),
     path('login/',signin,name='login'),
-   #o path('',index.html,name='index'),
+    path('admin/', admin.site.urls),
+    path('board/', include('board.urls', namespace='board')),
 ]
