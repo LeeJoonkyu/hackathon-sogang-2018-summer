@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 ]
 
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -58,7 +57,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'Hackathon', 'templates')
+            os.path.join(BASE_DIR,'Hackathon', 'templates'),
+            os.path.join(BASE_DIR,'Account','templates'), 
+            os.path.join(BASE_DIR,'board','templates'), 
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -123,4 +124,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-TEMPLATE_DIR = os.path.join(BASE_DIR,'Account','templates')

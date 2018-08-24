@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
-
+from django.contrib.auth.decorators import login_required
 from .models import Post
 # Create your views here.
 
@@ -25,6 +25,7 @@ def post_detail(request,id):
         'post' : post
     })
 
+@login_required
 def post_create(request):
     ctx = {}
     if request.method == 'POST':
@@ -48,4 +49,4 @@ def post_create(request):
                 error_msg.update({'content': '내용을 입력해주세요'})
             ctx.update({'error':error_msg, })
 
-    return render(request,'post_create.html', ctx)
+    return render(request,'board/post_create.html', ctx)

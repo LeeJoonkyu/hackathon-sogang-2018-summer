@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from .forms import UserForm,LoginForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login,authenticate
@@ -19,6 +20,8 @@ def signup(request):
             login(request, new_user)
             return redirect('board:post_list')
 
+        else:
+            return HttpResponseRedirect('/error/')
 
     else:
         form = UserForm()
@@ -35,7 +38,11 @@ def signin(request):
             login(request,user)
             return redirect('board:post_list')
         else:
-            return HttpResponse('로그인 실패')
+            return HttpResponseRedirect('/esignin/')
     else:
         form = LoginForm()
         return render(request,'Account/login.html',{'form':form})
+def esignin(request):
+    return render(request,'Account/esignin.html')
+def error(request):
+    return render(request,'Account/error.html')

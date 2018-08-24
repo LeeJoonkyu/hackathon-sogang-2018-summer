@@ -1,6 +1,12 @@
 {% extends "board/layout.html" %}
-
-{% block content%}
+{% block content %}
+{% if user.is_active %}
+<p>Welcom {{user.username}} </p>
+<a href="{% url 'logout' %}">로그아웃</a>
+<a href="{% url 'board:post_create' %}">글쓰기</a>
+{% else %}
+<button type="submit"><a href="{% url 'signin' %}">로그인</a></button>
+{% endif %}
 <form action="" method="get">
   <input type= "text" name="q" value="{{q}}"/>
   <input type= "submit" value="검색"/>
