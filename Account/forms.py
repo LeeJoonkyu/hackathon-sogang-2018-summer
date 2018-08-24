@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['username', 'email', 'password','last_name']
+        fields = ['username', 'email', 'password', 'last_name']
         labels = {
             'username' : '아이디',
             'email' : '이메일',
