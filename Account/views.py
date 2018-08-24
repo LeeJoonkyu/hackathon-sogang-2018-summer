@@ -11,7 +11,7 @@ def signup(request):
         if form.is_valid():
             new_user = User.objects.create_user(**form.cleaned_data)
             login(request, new_user)
-            return redirect('board')
+            return redirect('board:post_list')
     else:
         form = UserForm()
         return render(request,'Account/adduser.html',{'form':form})
@@ -25,7 +25,7 @@ def signin(request):
 
         if user is not None:
             login(request,user)
-            return redirect('board')
+            return redirect('board:post_list')
         else:
             return HttpResponse('로그인 실패')
     else:
