@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f552c78-a908-4b64-80f9-1b0ef15e3b7e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/board/templates/board/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/board/templates/board/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/board/templates/board/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/board/templates/board/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="7f552c78-a908-4b64-80f9-1b0ef15e3b7e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="post_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/board/templates/board/post_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            <state relative-caret-position="540">
+              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
@@ -56,14 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post_detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="post_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/board/templates/board/post_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="460">
+              <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -123,6 +116,7 @@
       <find>requestConte</find>
       <find>제</find>
       <find>hf</find>
+      <find>button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,11 +151,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="922" />
-    <option name="y" value="25" />
-    <option name="width" value="998" />
-    <option name="height" value="1055" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="993" />
+    <option name="y" value="27" />
+    <option name="width" value="927" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -293,7 +287,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="922" y="25" width="998" height="1055" extended-state="4" />
+    <frame x="993" y="27" width="927" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -303,7 +297,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23146293" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24919094" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
@@ -479,13 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hackathon/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/board/templates/board/post_create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-277">
@@ -497,24 +484,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/board/templates/board/post_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/board/templates/board/post_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="540">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hackathon/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/board/post_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
         </state>
       </provider>
     </entry>
