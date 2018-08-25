@@ -51,12 +51,13 @@ def post_create(request):
 
     return render(request,'board/post_create.html', ctx)
 
-def post_delete(request):
-    post = get_object_or_404(Post, id=id)
-    post.delete()
-    if request.method == 'POST':
+# @login_required
+# def post_delete(request):
+#     post = get_object_or_404(Post, id=id)
+#     post.delete()
+#     return redirect('board:post_list')
 
-
+@login_required
 def post_update(request):
     post = get_object_or_404(Post, id=id)
     title = post.title
