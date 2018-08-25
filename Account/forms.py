@@ -25,5 +25,6 @@ class LoginForm(forms.ModelForm):
         model = User
         fields = ['username', 'password']
         widgets = {
-            'password':forms.PasswordInput(attrs={'class':'form-control'}),
+                'username':forms.TextInput(attrs={'placeholder':'Username','class':'form-control'}),
+                'password':forms.PasswordInput(attrs={'placeholder':'Password','class':'form-control'}),
         }
