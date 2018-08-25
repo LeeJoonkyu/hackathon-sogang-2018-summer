@@ -36,6 +36,7 @@ def post_create(request):
             post = Post.objects.create(
                 title=title,
                 content=content,
+                name = request.user.get_username()
             )
             url = reverse('board:post_detail', kwargs={
                 'id': post.id,
@@ -50,3 +51,29 @@ def post_create(request):
             ctx.update({'error':error_msg, })
 
     return render(request,'board/post_create.html', ctx)
+
+def post_delete(request):
+    post = get_object_or_404(Post, id=id)
+    post.delete()
+   # if request.method == 'POST':
+
+def post_update(request):
+    post = get_object_or_404(Post, id=id)
+    title = post.title
+    content= post.content
+    if request.method == 'POST':
+        post.title = request.POST.get('title')
+        post.content = request.POST.get('content')
+        post.save()
+        url = reverse('board:post_detail', kwargs={
+            'id': post.id,
+        })
+        return redirect(url)
+
+    ctx = {
+        'post': post,
+        'title': title,
+        'content': content,
+    }
+    return render(request, 'post_create.html', ctx)
+
