@@ -25,25 +25,9 @@
   <hr/>
 
     <a href="{% url 'board:post_list' %}" class="waves-effect waves-light btn">목록으로</a>
-    <a href="{% url 'board:post_update' id=post.id %}" class="waves-effect waves-light btn">수정하기</a>
+	{% if user.is_active %}
+	<a href="{% url 'board:post_update' id=post.id %}" class="waves-effect waves-light btn">수정하기</a>
     <a href="{% url 'board:post_delete' id=post.id %}" class="waves-effect waves-light btn">삭제하기</a>
-
-  <h3>Comments</h3>
-
-  <ul>
-  {% for comment in post.comment_set.all%}
-    <li>
-    {{comment.message}}
-    <small>{{comment.author}}</small>
-    <small>{{comment.updated_at}}</small>
-    </li>
-    {% endfor %}
-
-    <!--comment가 1:n의 관계를 설명하기 가장 적합한 예시.-->
-
-  </ul>
-  <a href="{%url "board:post_list" %}">글 목록</a>
-
-
+	{% endif %}
 
 {% endblock %}

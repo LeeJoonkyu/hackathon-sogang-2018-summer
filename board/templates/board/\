@@ -11,7 +11,6 @@
 {% extends "board/layout.html" %}
 {% block content %}
 {% if user.is_active %}
-
 <p align="right" style="font-family: 'Montserrat', sans-serif;">Welcome, {{user.username}}　　</p>
 <p align="right">
 <button type="submit"><a href="{% url 'logout' %}">로그아웃</a></button>
@@ -37,9 +36,9 @@
     {%for post in post_list%}
     <li class="list-group-item">
       <a href="{% url "board:post_detail" post.id %}">
-        {{post.title}} {{ post.detail }}
+        {{post.title}}
       </a>
-      <small>by <a href ="{% url 'profile' %} ">{{post.name}}</a></small>
+      <small>by {{post.name}}</small>
       <small>at {{post.updated_at}}</small>
 
     </li>
