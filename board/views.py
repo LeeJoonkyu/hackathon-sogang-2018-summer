@@ -36,6 +36,7 @@ def post_create(request):
             post = Post.objects.create(
                 title=title,
                 content=content,
+                name = request.user.get_username()
             )
             url = reverse('board:post_detail', kwargs={
                 'id': post.id,
@@ -51,6 +52,7 @@ def post_create(request):
 
     return render(request,'board/post_create.html', ctx)
 
+
 # @login_required
 # def post_delete(request):
 #     post = get_object_or_404(Post, id=id)
@@ -58,6 +60,7 @@ def post_create(request):
 #     return redirect('board:post_list')
 
 @login_required
+
 def post_update(request):
     post = get_object_or_404(Post, id=id)
     title = post.title
