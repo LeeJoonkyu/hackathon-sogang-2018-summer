@@ -1,22 +1,70 @@
-<h2>회원가입</h2>
-<form method="post" action="">
-	{% csrf_token %}
-	<p>아이디</p>
-	{{ form.username }}
-	</br>
-	<p>이메일</p>
-	{{ form.email }}
-	</br>
-	<p>비밀번호</p>
-	{{ form.password }}
-	</br>
-	<p>주소</p>
-	<input type="text" id="sample6_postcode" placeholder="우편번호">
-<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-	{{ form.first_name }}
-	{{ form.last_name }}
-</br>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Basic Register Page - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+        </style>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+    <section class="container">
+        <form method="post" action="">
+                {% csrf_token %}
+		<div class="container-page">				
+			<div class="col-md-6">
+
+				<h3 class="dark-grey">Registration</h3>
+			
+				<div class="form-group col-lg-12">
+					<label>Username</label>
+					{{ form.username }}
+				</div>
+				
+				<div class="form-group col-lg-6">
+					<label>Password</label>
+					{{ form.password }}
+				</div>
+								
+				<div class="form-group col-lg-6">
+					<label>Email Address</label>
+					{{ form.email }}
+				</div>
+				
+				<div class="form-group col-lg-6">
+                    <label>주소</label>
+                    <input type="text" id="sample6_postcode" placeholder="우편번호" class="form-control">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label style="color:white">우편번호</label><br>
+                        <input class="btn btn-primary" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+                </div>
+                <div class="form-group col-lg-12">
+                        {{ form.first_name }}
+                </div>
+                <div class="form-group col-lg-12">
+                        {{ form.last_name }}
+                </div>
+                <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
     function sample6_execDaumPostcode() {
         new daum.Postcode({
@@ -60,5 +108,33 @@
         }).open();
     }
 </script>
-	<input type="submit" value="회원가입" />
-</form>
+			
+			
+			</div>
+		
+			<div class="col-md-6">
+				<h3 class="dark-grey">Terms and Conditions</h3>
+				<p>
+					By clicking on "Register" you agree to our Terms and Conditions
+				</p>
+				<p>
+					While rare, prices are subject to change based on exchange rate fluctuations - 
+					should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. (Paragraph 13.5.8)
+				</p>
+				<p>
+					Should there be an error in the description or pricing of a product, we will provide you with a full refund (Paragraph 13.5.6)
+				</p>
+				<p>
+					Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)
+				</p>
+				
+				<button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+        </form>
+    </section>
+    
+</div>	<script type="text/javascript">
+		</script>
+</body>
+</html>

@@ -35,7 +35,7 @@
 
 <ul class="list-group">
     {%for post in post_list%}
-    <li class="list-group-item">
+    <li class="list-group-item" style="padding-left:20px;padding-right:20px;">
       <a href="{% url "board:post_detail" post.id %}">
         {{post.title}} {{ post.detail }}
       </a>

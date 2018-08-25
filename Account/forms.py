@@ -9,8 +9,8 @@ class UserForm(forms.ModelForm):
             'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'15자 이내로 입력 가능합니다.'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'password' : forms.PasswordInput(attrs={'class': 'form-control'}),
-            'first_name' : forms.TextInput(attrs={'placeholder':'주소',}),
-            'last_name' : forms.TextInput(attrs={'placeholder':'상세주소',}),
+            'first_name' : forms.TextInput(attrs={'class':'form-control','placeholder':'주소',}),
+            'last_name' : forms.TextInput(attrs={'class':'form-control','placeholder':'상세주소',}),
         }
         labels = {
             'username' : '아이디',
