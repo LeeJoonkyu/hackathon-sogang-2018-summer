@@ -1,47 +1,22 @@
-{% extends 'board/layout.html' %}
-
-
-{% block content %}
-{% if user.is_active %}
-<p>Welcome {{user.username}} </p>
-<a href="{% url 'logout' %}">로그아웃</a>
-
-{% else %}
-{% if form.errors %}
-<p>ID나 PW가 불일치합니다.</p>
-{% endif %}
-<button type="submit"><a href="{% url 'signin' %}">로그인</a></button>
-{% endif %}
-<div style="text-align: center; margin-top: 100px;">
-  {% if post %}
-  <h2>글 수정하기</h2>
-  {% else %}
-  <h2>게시판 글쓰기</h2>
-  {% endif %}
-  <form method="POST">
-    {% csrf_token %}
-    <label for="title">주소 : </label>
-    <input type="text" id="sample6_postcode" placeholder="우편번호">
-    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-
-    <input type="text" id="title" name="title"/>
-    <input type="text" id="detail" name="detail" /><br/>
-
-    {% if error.title %}
-      <p style="color: red;">제목을 입력해주세요</p>
-    {% endif %}
-
-    <label for="content">계좌 및 희망요금 :</label>
-    <input type="text" name="content" /><br /><br />
-    {% if error.content %}
-      <p style="color: red;">내용을 입력해주세요</p>
-    {% endif %}
-
-    <button type="submit">제출</button>
-  </form>
-</div>
-
-  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<h2>회원가입</h2>
+<form method="post" action="">
+	{% csrf_token %}
+	<p>아이디</p>
+	{{ form.username }}
+	</br>
+	<p>이메일</p>
+	{{ form.email }}
+	</br>
+	<p>비밀번호</p>
+	{{ form.password }}
+	</br>
+	<p>주소</p>
+	<input type="text" id="sample6_postcode" placeholder="우편번호">
+<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+	{{ form.first_name }}
+	{{ form.last_name }}
+</br>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
     function sample6_execDaumPostcode() {
         new daum.Postcode({
@@ -77,14 +52,13 @@
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('sample6_postcode').value = data.zonecode; //5자리 새우편번호 사용
-                document.getElementById('title').value = fullAddr;
+                document.getElementById('id_first_name').value = fullAddr;
 
                 // 커서를 상세주소 필드로 이동한다.
-                document.getElementById('detail').focus();
+                document.getElementById('id_last_name').focus();
             }
         }).open();
     }
 </script>
 	<input type="submit" value="회원가입" />
 </form>
-{% endblock %}

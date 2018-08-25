@@ -34,11 +34,11 @@
 
 <ul class="list-group">
     {%for post in post_list%}
-    <li class="list-group-item">
+    <li class="list-group-item" style="padding-left:20px;padding-right:20px;">
       <a href="{% url "board:post_detail" post.id %}">
-        {{post.title}}
+        {{post.title}} {{ post.detail }}
       </a>
-      <small>by {{post.name}}</small>
+      <small>by <a href ="{% url 'profile' %} ">{{post.name}}</a></small>
       <small>at {{post.updated_at}}</small>
 
     </li>

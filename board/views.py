@@ -30,11 +30,13 @@ def post_create(request):
     ctx = {}
     if request.method == 'POST':
         title = request.POST.get('title')
+        detail = request.POST.get('detail')
         content = request.POST.get('content')
 
         if title and content:
             post = Post.objects.create(
                 title=title,
+                detail = detail,
                 content=content,
                 name = request.user.get_username()
             )
@@ -59,6 +61,7 @@ def post_delete(request,id):
     return redirect('board:post_list')
 
 @login_required
+
 def post_update(request,id):
     post = get_object_or_404(Post, id=id)
     title = post.title
