@@ -8,7 +8,7 @@
 
 {% block content %}
 {% if user.is_active %}
-<p>Welcom {{user.username}} </p>
+<p>Welcome {{user.username}} </p>
 <a href="{% url 'logout' %}">로그아웃</a>
 
 {% else %}

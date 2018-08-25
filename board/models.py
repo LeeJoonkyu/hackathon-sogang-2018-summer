@@ -6,8 +6,8 @@ from django.db import models
 class Post(models.Model):
 
     name = models.CharField(max_length=150)
-    title = models.CharField(max_length=100, verbose_name='제목')
-    content = models.TextField(verbose_name='내용')
+    title = models.CharField(max_length=100, verbose_name='주소를 입력하세요')
+    content = models.TextField(verbose_name='계좌번호와 희망 요금을 입력하세요')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     class Meta:

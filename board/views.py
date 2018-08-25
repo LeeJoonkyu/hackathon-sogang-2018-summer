@@ -54,14 +54,14 @@ def post_create(request):
 
 
 @login_required
-def post_delete(request):
+def post_delete(request, id):
     post = get_object_or_404(Post, id=id)
     post.delete()
     return redirect('board:post_list')
 
 @login_required
 
-def post_update(request):
+def post_update(request, id):
     post = get_object_or_404(Post, id=id)
     title = post.title
     content= post.content
@@ -79,5 +79,5 @@ def post_update(request):
         'title': title,
         'content': content,
     }
-    return render(request, 'post_create.html', ctx)
+    return render(request, 'board/post_create.html', ctx)
 
