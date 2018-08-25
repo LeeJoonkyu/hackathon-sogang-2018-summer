@@ -65,9 +65,11 @@ def post_delete(request,id):
 def post_update(request,id):
     post = get_object_or_404(Post, id=id)
     title = post.title
+    detail = post.detail
     content= post.content
     if request.method == 'POST':
         post.title = request.POST.get('title')
+        post.detail = request.POST.get('detail')
         post.content = request.POST.get('content')
         post.save()
         url = reverse('board:post_detail', kwargs={
@@ -78,6 +80,7 @@ def post_update(request,id):
     ctx = {
         'post': post,
         'title': title,
+        'detail':detail,
         'content': content,
     }
     return render(request, 'board/post_create.html', ctx)
