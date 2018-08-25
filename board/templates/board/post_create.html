@@ -42,6 +42,7 @@
                     <input type="text" id="sample6_postcode" placeholder="우편번호" class="form-control">
                 </div>
                 <div class="form-group col-lg-6">
+                    <label style="color:white">주소</label><br>
                     <input class="btn btn-primary" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
                 </div>
                 <div class="form-group col-lg-12">
@@ -54,9 +55,9 @@
                 {% if error.title %}
                 <p style="color: red;">제목을 입력해주세요</p>
                 {% endif %}
-                <div class="form-group col-lg-6">
+                <div class="form-group col-lg-12">
                     <label for="content">계좌 및 희망요금 :</label><br>
-                    <input type="text" name="content" class="form-control"/>
+                    <input type="text" name="content" class="form-control"/><br>
                 </div>
                 {% if error.content %}
                     <p style="color: red;">내용을 입력해주세요</p>
@@ -104,9 +105,10 @@
         }).open();
     }
 </script>
-			
+			<br>
 			
             <div class="form-group col-lg-6">
+                    <label style="color:white">제출</label><br>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
@@ -119,4 +121,3 @@
 </body>
 </html>
 {% endblock %}
-
