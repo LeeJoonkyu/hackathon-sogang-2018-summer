@@ -6,6 +6,7 @@
 <a href="{% url 'board:post_create' %}">글쓰기</a>
 {% else %}
 <button type="submit"><a href="{% url 'signin' %}">로그인</a></button>
+<button type="submit"><a href="{% url 'join' %}">회원가입</a></button>
 {% endif %}
 <form action="" method="get">
   <input type= "text" name="q" value="{{q}}"/>
@@ -22,7 +23,7 @@
         {{post.title}}
       </a>
 
-      <small>by {{post.author}}</small>
+      <small>by {{post.name}}</small>
       <small>at {{post.updated_at}}</small>
 
     </li>

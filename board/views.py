@@ -57,6 +57,7 @@ def post_delete(request):
     post.delete()
    # if request.method == 'POST':
 
+@login_required
 def post_update(request):
     post = get_object_or_404(Post, id=id)
     title = post.title
@@ -76,4 +77,3 @@ def post_update(request):
         'content': content,
     }
     return render(request, 'post_create.html', ctx)
-
