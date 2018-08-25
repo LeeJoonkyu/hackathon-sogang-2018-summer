@@ -3,9 +3,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<style>
 	.hf {
-	  width: 40%;
+	  width: .4rem;
 	  margin: 0 auto;
 	}
+
+  .input-group hf{
+    width: .4rem;
+    marign: 0 auto;
+  }
 	</style>
 </head>
 
@@ -24,7 +29,8 @@
 </p>
 {% endif %}
 <form action="" method="get">
-	<div class="input-group hf">
+
+  <div class="input-group hf">
   	<input align="center" type="text" class="form-control" aria-describedby="basic-addon2" name="q" value="{{q}}">
 	<div class="input-group-append">
   		<button class="btn btn-outline-secondary" type="submit">Button</button>

@@ -12,9 +12,8 @@
       text-align: center;
 
     }
-    .btn{
-      margin-left :auto;
-      margin-right :auto;
+    .options{
+      text-align: center;
     }
 
   </style>
@@ -48,7 +47,7 @@
 
 
   </div>
-  <div class="btn">
+  <div class="options">
     <a href="{% url 'board:post_list' %}" class="waves-effect waves-light btn">목록으로</a>
 	{% if user.is_active %}
 	<a href="{% url 'board:post_update' id=post.id %}" class="waves-effect waves-light btn">수정하기</a>
