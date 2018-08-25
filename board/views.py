@@ -30,11 +30,13 @@ def post_create(request):
     ctx = {}
     if request.method == 'POST':
         title = request.POST.get('title')
+        detail = request.POST.get('detail')
         content = request.POST.get('content')
 
         if title and content:
             post = Post.objects.create(
                 title=title,
+                detail = detail,
                 content=content,
                 name = request.user.get_username()
             )
@@ -52,16 +54,15 @@ def post_create(request):
 
     return render(request,'board/post_create.html', ctx)
 
-
 @login_required
-def post_delete(request, id):
+def post_delete(request,id):
     post = get_object_or_404(Post, id=id)
     post.delete()
     return redirect('board:post_list')
 
 @login_required
 
-def post_update(request, id):
+def post_update(request,id):
     post = get_object_or_404(Post, id=id)
     title = post.title
     content= post.content
@@ -80,4 +81,3 @@ def post_update(request, id):
         'content': content,
     }
     return render(request, 'board/post_create.html', ctx)
-

@@ -42,6 +42,9 @@ def signin(request):
     else:
         form = LoginForm()
         return render(request,'Account/login.html',{'form':form})
+
+def profile(request):
+    return render(request,'Account/profile.html')
 def esignin(request):
     return render(request,'Account/esignin.html')
 def error(request):
