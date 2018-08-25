@@ -23,6 +23,11 @@
 
 
   <hr/>
+
+    <a href="{% url 'board:post_list' %}" class="waves-effect waves-light btn">목록으로</a>
+    <a href="{% url 'board:post_update' id=post.id %}" class="waves-effect waves-light btn">수정하기</a>
+    <a href="{% url 'board:post_delete' id=post.id %}" class="waves-effect waves-light btn">삭제하기</a>
+
   <h3>Comments</h3>
 
   <ul>

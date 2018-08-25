@@ -10,11 +10,11 @@ def signup(request):
     if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
-
-            info = form.save(commit=False)
-            recipient_add = request.POST.get('recipient_postcode')+ ' ' + request.POST.get('recipient_add') + ' ' + request.POST.get('recipient_adddetail')
-            info.last_name = recipient_add
-            info.save()
+            #
+            # info = form.save(commit=False)
+            # recipient_add = request.POST.get('recipient_postcode')+ ' ' + request.POST.get('recipient_add') + ' ' + request.POST.get('recipient_adddetail')
+            # info.last_name = recipient_add
+            # info.save()
 
             new_user = User.objects.create_user(**form.cleaned_data)
             login(request, new_user)
@@ -42,6 +42,9 @@ def signin(request):
     else:
         form = LoginForm()
         return render(request,'Account/login.html',{'form':form})
+
+def profile(request):
+    return render(request,'Account/profile.html')
 def esignin(request):
     return render(request,'Account/esignin.html')
 def error(request):

@@ -4,11 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Post(models.Model):
-<<<<<<< HEAD
     name = models.CharField(max_length=150)
-=======
-
->>>>>>> 128cb9ce2249db6650bd3313593772c67f531350
     title = models.CharField(max_length=100, verbose_name='제목')
     content = models.TextField(verbose_name='내용')
     created_at = models.DateTimeField(auto_now_add=True)

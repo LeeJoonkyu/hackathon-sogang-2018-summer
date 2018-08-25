@@ -1,0 +1,16 @@
+{% if user.is_authenticated %}
+	<p>아이디 : {{ user.get_username }}.</p>
+	<p>이메일 : {{ user.email }}</p>
+	<p>주소 : {{ user.get_full_name }} </p>
+	<p>가상계좌 : <b id="demo">  </b><b id="demo1"> </b><button onclick="myFunction()">보기</button></p>
+{% else %}
+	<p>Welcome, new user. Please log in.</p>
+{% endif %}
+
+<script type="text/javascript">
+	function myFunction() {
+	    var x = Math.floor((Math.random() * 1000000000000) + 1);
+		document.getElementById("demo").innerHTML = x;
+		document.getElementById("demo1").innerHTML = ' (우리은행)';
+	}
+</script>
