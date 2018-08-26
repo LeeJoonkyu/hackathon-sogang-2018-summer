@@ -71,7 +71,7 @@ class LoginForm(forms.ModelForm):
 ```
 
 | 필드명 | 폼 타입 | 필수여부 |
-| ---- | ---- | -------- | ----------- |
+| ---- | ---- | -------- |
 | username | Text Input | 필수 |
 | password | Password Input | 필수 |
 ___
