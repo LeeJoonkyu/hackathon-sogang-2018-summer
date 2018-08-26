@@ -1,5 +1,5 @@
 # Parikng For All ( 주차공유 플랫폼 ) v 1.0
-![예시](https://github.com/LeeJoonkyu/hackathon-sogang-2018-summer/blob/master/example.png)
+![예시](https://github.com/LeeJoonkyu/hackathon-sogang-2018-summer/blob/master/title.png)
 
 Parking For All은 서강대학교 제 4회 해커톤 경진대회에서 `장충체육관`팀이 개발한 주차공유 플랫폼입니다.
 
