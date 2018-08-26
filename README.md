@@ -13,11 +13,7 @@ Parking For All은 서강대학교 제 4회 해커톤 경진대회에서 `장충
 #### [3] `Python` 3.5.2
 `pyenv`와 `pip`를 이용하여 개발의 편이를 위해 가상환경을 구성하고, 구성된 가상환경에서 `django`를 이용하여 웹앱을 개발 했습니다.
 
-| 필드명 | 타입 | 필수여부 | 설명 |
-| ---- | ---- | -------- | ----------- |
-| user\_key | String | Required | 메시지를 발송한 유저 식별 키 |
-| type | String | Required | text, photo |
-| content | String | Required | 자동응답 명령어의 메시지 텍스트 혹은 미디어 파일 uri |
+
 
 ## 3. Source Code Specification
 
@@ -48,7 +44,7 @@ class UserForm(forms.ModelForm):
 ```
 
 | 필드명 | 폼 타입 | 설명 |
-| ---- | ---- | -------- | ----------- |
+| ---- | ---- | -------- |
 | username | Text Input | 유저 Id |
 | email | Email Input | 유저 Email |
 | password | Password Input | 유저 PassWord|
@@ -150,7 +146,7 @@ class Post(models.Model):
 ```
 
 | 필드명 | 모델 필드 타입 | 설명 |
-| ---- | ---- | -------- | ----------- |
+| ---- | ---- | -------- |
 | name | CharField | 글 제목 |
 | title | CharField | 주소 |
 | detail | CharField | 상세 주소 |
