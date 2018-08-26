@@ -4,7 +4,10 @@ Parking For All은 서강대학교 제 4회 해커톤 경진대회에서 `장충
 ## 1. What?
 주택가 밀집지역의 핵심 문제인 "주차 공간 부족" 을 해결하기 위한 플랫폼입니다. 공유경제라는 개념을 기반으로 하여 이 문제를 해결하려했고 [예시 사이트](http://49.236.137.192/) 에서 예시를 확인 할 수 있습니다.
 
-## 2. Develop Environment
+## 2. Biz Model
+![Biz Model](https://github.com/LeeJoonkyu/hackathon-sogang-2018-summer/blob/master/bizmodel.png)
+
+## 3. Develop Environment
 
 #### [1] `Ubuntu` 16.0.4
 리눅스 환경을 기반으로 하여, 서버를 구축하였고 사이트를 이 서버에서 배포중입니다. 
@@ -15,7 +18,7 @@ Parking For All은 서강대학교 제 4회 해커톤 경진대회에서 `장충
 
 
 
-## 3. Source Code Specification
+## 4. Source Code Specification
 
 #### [1] Account
 Account, 회원 관리를 위한 웹앱은 `django`에서 제공하는 User 모델을 이용하여 모델 폼을 구성하였습니다.
@@ -154,7 +157,6 @@ class Post(models.Model):
 | created_at | DateTimeField | 글 게시시간 ( 자동 입력 ) |
 | updated_at | DateTimeField | 글 수정시간 ( 자동 입력 ) |
 | is_on | IntegerField | 주차공간 대여가능 여부 |
-(ordering에 대한 설명과 포스트에 관한 설명 부탁)
 ___
 
 ```
@@ -255,5 +257,3 @@ create가 끝나면 해당 게시글 내용으로 이동합니다.
 
 delete가 끝나면 리스트로 돌아가도록 리디렉션 했습니다.
 
-## 3. Biz Model
-![Biz Model](https://github.com/LeeJoonkyu/hackathon-sogang-2018-summer/blob/master/bizmodel.png)
