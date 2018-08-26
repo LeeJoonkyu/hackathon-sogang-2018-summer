@@ -256,4 +256,4 @@ create가 끝나면 해당 게시글 내용으로 이동합니다.
 delete가 끝나면 리스트로 돌아가도록 리디렉션 했습니다.
 
 ## 3. Biz Model
-
+![Biz Model](https://github.com/LeeJoonkyu/hackathon-sogang-2018-summer/blob/master/bizmodel.png “비즈니스 모델”)
